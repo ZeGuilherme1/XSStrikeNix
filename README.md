@@ -1,4 +1,4 @@
-# XSStrikeNix
+# XSStrikeNix ❄️
 
 Hello, my name is Zé and this is my attempt to package XSStrike for Nix ;)
 
