@@ -23,10 +23,11 @@ pkgs.stdenv.mkDerivation {
     ];
 
     installPhase = ''
+        mkdir -p $out/lib/xsstrike
+        cp -r xsstrike.py core db modes plugins $out/lib/xsstrike/
         mkdir -p $out/bin
-        cp -r core db modes plugins $out/bin/
-        install -m755 xsstrike.py $out/bin/
-
+        ln -s $out/lib/xsstrike/xsstrike.py $out/bin/xsstrike
+        chmod +x $out/bin/xsstrike
     '';
 }
     
